@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h2 {
+    display: flex;
+    width: 70px;
+    height: 40px;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    font-size: 20px;
+    box-shadow: 0 5px 2px var(--red_key_shad);
+  }
+  h3 {
+    display: flex;
+    width: 70px;
+    height: 40px;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    font-size: 20px;
+    box-shadow: 0 5px 2px var(--red_key_shad);
+  }
+  h4 {
+    display: flex;
+    width: 70px;
+    height: 40px;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    font-size: 20px;
+    box-shadow: 0 5px 2px var(--red_key_shad);
+  }
+  h2:hover {
+    cursor: pointer;
+  }
+  h3:hover {
+    cursor: pointer;
+  }
+  h4:hover {
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  h2,
+  h3,
+  h4 {
+    width: 60px;
+    height: 30px;
+    font-size: 16px;
+  }
+}
+.theme1 {
+  --main_bg: hsl(222, 26%, 31%);
+  --tog_keypad: hsl(223, 31%, 20%);
+  --screen_bg: hsl(223, 28%, 25%);
+  --key_bg: hsl(225, 21%, 49%);
+  --key_shad: hsl(224, 28%, 35%);
+  --key_bg_tog: hsl(6, 63%, 50%);
+  --red_key_shad: hsl(6, 70%, 34%);
+  --orange_key_bg: hsl(30, 25%, 89%);
+  --orange_key_shad: hsl(28, 16%, 65%);
+  --text_dark: hsl(221, 24%, 53%);
+  /* --text_dark: hsl(221, 14%, 31%); */
+  --text_light: hsl(0, 0%, 100%);
+}
+
+.theme2 {
+  --main_bg: hsl(0, 0%, 90%);
+  --tog_keypad: hsl(0, 5%, 81%);
+  --screen_bg: hsl(0, 0%, 93%);
+  --key_bg: hsl(185, 42%, 37%);
+  --key_shad: hsl(185, 58%, 25%);
+  --key_bg_tog: hsl(185, 42%, 37%);
+  --red_key_shad: hsl(185, 58%, 25%);
+  --orang_key_bg: hsl(45, 7%, 89%);
+  --orange_key_shad: hsl(35, 11%, 61%);
+  --text_dark: hsl(60, 10%, 19%);
+  --text_light: hsl(0, 0%, 100%);
+}
+.theme3 {
+  --main_bg: hsl(268, 75%, 9%);
+  --tog_keypad: hsl(268, 71%, 12%);
+  --screen_bg: hsl(268, 71%, 12%);
+  --key_bg: hsl(281, 89%, 26%);
+  --key_shad: hsl(285, 91%, 52%);
+  --key_bg_tog: hsl(176, 100%, 44%);
+  --red_key_shad: sl(177, 92%, 70%);
+  --orang_key_bg: hsl(268, 47%, 21%);
+  --orange_key_shad: hsl(290, 70%, 36%);
+  --text_dark: hsl(52, 100%, 62%);
+  --text_light: hsl(198, 20%, 13%);
+}

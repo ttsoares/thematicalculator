@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h2 {
+    display: flex;
+    background-color: azure;
+    width: 80px;
+    height: 40px;
+    font-weight: bold;
+    color: black;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    font-size: 20px;
+  }
+  h3 {
+    display: flex;
+    background-color: cornflowerblue;
+    width: 80px;
+    height: 40px;
+    font-weight: bold;
+    color: black;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    font-size: 20px;
+    color: white;
+  }
+  h4 {
+    display: flex;
+    background-color: tomato;
+    width: 80px;
+    height: 40px;
+    font-weight: bold;
+    color: black;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    font-size: 20px;
+  }
+  h2:hover {
+    cursor: pointer;
+  }
+  h3:hover {
+    cursor: pointer;
+  }
+  h4:hover {
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  h2,
+  h3,
+  h4 {
+    width: 60px;
+    height: 30px;
+    font-size: 16px;
+  }
+}
+
+.theme1 {
+  --main-bg: 58, 65, 79;
+  --tog_keypad: 35, 40, 51;
+  --screen-bg: 24, 28, 38;
+  --key-bg: 99, 105, 125;
+  --blue-key-shad: 64, 71, 89;
+  --key-ng-tog: 128, 55, 47;
+  --red-key-shad: 87, 32, 26;
+  --orang-key-bg: 227, 199, 170;
+  --grayish-key-shad: 166, 152, 139;
+  --text-dark: 68, 71, 79;
+  --text-light: 255, 255, 255;
+}
+
+.theme2 {
+  --main-bg: 230, 230, 230;
+  --tog_keypad: 207, 196, 196;
+  --screen-bg: 237, 237, 237;
+  --key-bg: 55, 91, 94;
+  --blue-key-shad: 27, 61, 64;
+  --key-ng-tog: 102, 44, 2;
+  --red-key-shad: 69, 29, 1;
+  --orang-key-bg: 227, 223, 211;
+  --grayish-key-shad: 156, 148, 138;
+  --text-dark: 48, 48, 44;
+  --text-light: 255, 255, 255;
+}
+
+.theme3 {
+  --main-bg: 14, 6, 23;
+  --tog_keypad: 19, 9, 31;
+  --screen-bg: 24, 28, 38;
+  --key-bg: 48, 7, 66;
+  --blue-key-shad: 102, 12, 133;
+  --key-ng-tog: 0, 112, 105;
+  --red-key-shad: 14, 179, 170;
+  --orang-key-bg: 40, 28, 54;
+  --grayish-key-shad: 81, 28, 92;
+  --text-dark: 27, 31, 33;
+  --text-light: 158, 137, 0;
+}
