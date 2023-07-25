@@ -5,11 +5,21 @@ import { useTheme } from "next-themes";
 
 //---------------------------------
 export default function Home() {
-  const { theme, setTheme } = useTheme("theme1");
+  const storedTheme = localStorage.getItem("theme");
+  let initialTheme = "theme1";
+  if (
+    storedTheme === "theme1" ||
+    storedTheme === "theme2" ||
+    storedTheme === "theme3"
+  ) {
+    initialTheme = storedTheme;
+  }
 
-  const [theme1, setTheme1] = useState(true);
-  const [theme2, setTheme2] = useState(false);
-  const [theme3, setTheme3] = useState(false);
+  const { theme, setTheme } = useTheme(initialTheme);
+
+  const [theme1, setTheme1] = useState(initialTheme === "theme1");
+  const [theme2, setTheme2] = useState(initialTheme === "theme2");
+  const [theme3, setTheme3] = useState(initialTheme === "theme3");
 
   const [array1, setArray1] = useState([]);
   const [buffer, setBuffer] = useState([]);
@@ -28,18 +38,21 @@ export default function Home() {
   }
 
   function callTheme1() {
+    localStorage.setItem("theme", "theme1");
     setTheme("theme1");
     setTheme1(true);
     setTheme2(false);
     setTheme3(false);
   }
   function callTheme2() {
+    localStorage.setItem("theme", "theme2");
     setTheme("theme2");
     setTheme1(false);
     setTheme2(true);
     setTheme3(false);
   }
   function callTheme3() {
+    localStorage.setItem("theme", "theme3");
     setTheme("theme3");
     setTheme1(false);
     setTheme2(false);
