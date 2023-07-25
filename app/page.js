@@ -310,13 +310,13 @@ export default function Home() {
           </h2>
           <h3
             onClick={fncReset}
-            className={`${theme} text-white bg-t-spc_key_bg w-28 md:w-[176px] col-span-2 shadow-sm shadow-t-spc_key_shad`}
+            className={`${theme} text-white bg-t-spc_key_bg w-28 md:w-[169px] col-span-2 shadow-sm shadow-t-spc_key_shad`}
           >
             RESET
           </h3>
           <h4
             onClick={fncEqual}
-            className={`${theme} bg-t-bg_equal w-28 md:w-[176px] col-span-2 text-t-text_display shadow-md shadow-t-equal_shad`}
+            className={`${theme} bg-t-bg_equal w-28 md:w-[169px] col-span-2 text-t-text_display shadow-md shadow-t-equal_shad`}
           >
             =
           </h4>
