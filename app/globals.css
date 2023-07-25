@@ -4,6 +4,7 @@
 
 @layer base {
   h2 {
+    margin-top: 7px;
     display: flex;
     width: 70px;
     height: 40px;
@@ -12,9 +13,11 @@
     align-items: center;
     border-radius: 5px;
     font-size: 20px;
-    box-shadow: 0 5px 2px var(--red_key_shad);
+    box-shadow: 0 5px 2px var(--norm_key_shad);
+    @apply transform active:translate-y-1 transition-transform;
   }
   h3 {
+    margin-top: 7px;
     display: flex;
     width: 70px;
     height: 40px;
@@ -23,9 +26,11 @@
     align-items: center;
     border-radius: 5px;
     font-size: 20px;
-    box-shadow: 0 5px 2px var(--red_key_shad);
+    box-shadow: 0 5px 2px var(--norm_key_shad);
+    @apply transform active:translate-y-1 transition-transform;
   }
   h4 {
+    margin-top: 7px;
     display: flex;
     width: 70px;
     height: 40px;
@@ -34,16 +39,20 @@
     align-items: center;
     border-radius: 5px;
     font-size: 20px;
-    box-shadow: 0 5px 2px var(--red_key_shad);
+    box-shadow: 0 5px 2px var(--norm_key_shad);
+    @apply transform active:translate-y-1 transition-transform;
   }
   h2:hover {
     cursor: pointer;
+    background-color: var(--norm_key_shad);
   }
   h3:hover {
     cursor: pointer;
+    background-color: var(--norm_key_shad);
   }
   h4:hover {
     cursor: pointer;
+    background-color: var(--norm_key_shad);
   }
 }
 
@@ -58,42 +67,43 @@
 }
 .theme1 {
   --main_bg: hsl(222, 26%, 31%);
-  --tog_keypad: hsl(223, 31%, 20%);
-  --screen_bg: hsl(223, 28%, 25%);
-  --key_bg: hsl(225, 21%, 49%);
-  --key_shad: hsl(224, 28%, 35%);
-  --key_bg_tog: hsl(6, 63%, 50%);
-  --red_key_shad: hsl(6, 70%, 34%);
-  --orange_key_bg: hsl(30, 25%, 89%);
-  --orange_key_shad: hsl(28, 16%, 65%);
-  --text_dark: hsl(221, 24%, 53%);
-  /* --text_dark: hsl(221, 14%, 31%); */
-  --text_light: hsl(0, 0%, 100%);
+  --display_bg: hsl(224, 36%, 15%);
+  --bg_equal: hsl(6, 63%, 50%);
+  --bg_keyboard: hsl(223, 31%, 20%);
+  --equal_shad: hsl(6, 75%, 44%);
+  --spc_key_shad: hsl(224, 32%, 38%);
+  --text_out: hsl(221, 14%, 63%);
+  --text_display: hsl(100, 0%, 100%);
+  --norm_key_shad: hsl(225, 41%, 29%);
+  --spc_key_bg: hsl(225, 21%, 49%);
+  --fg_keys: hsl(224, 26%, 35%);
+  --bg_nrm_keys: hsl(30, 15%, 89%);
 }
-
 .theme2 {
   --main_bg: hsl(0, 0%, 90%);
-  --tog_keypad: hsl(0, 5%, 81%);
-  --screen_bg: hsl(0, 0%, 93%);
-  --key_bg: hsl(185, 42%, 37%);
-  --key_shad: hsl(185, 58%, 25%);
-  --key_bg_tog: hsl(185, 42%, 37%);
-  --red_key_shad: hsl(185, 58%, 25%);
-  --orang_key_bg: hsl(45, 7%, 89%);
-  --orange_key_shad: hsl(35, 11%, 61%);
-  --text_dark: hsl(60, 10%, 19%);
-  --text_light: hsl(0, 0%, 100%);
+  --display_bg: hsl(0, 0%, 93%);
+  --bg_equal: hsl(185, 42%, 37%);
+  --bg_keyboard: hsl(0, 5%, 81%);
+  --equal_shad: hsl(26, 100%, 53%);
+  --spc_key_shad: hsl(185, 61%, 35%);
+  --text_out: hsl(60, 10%, 19%);
+  --text_display: hsl(100, 1%, 100%);
+  --norm_key_shad: hsl(35, 11%, 61%);
+  --spc_key_bg: hsl(185, 42%, 37%);
+  --fg_keys: hsl(60, 14%, 22%);
+  --bg_nrm_keys: hsl(45, 7%, 89%);
 }
 .theme3 {
   --main_bg: hsl(268, 75%, 9%);
-  --tog_keypad: hsl(268, 71%, 12%);
-  --screen_bg: hsl(268, 71%, 12%);
-  --key_bg: hsl(281, 89%, 26%);
-  --key_shad: hsl(285, 91%, 52%);
-  --key_bg_tog: hsl(176, 100%, 44%);
-  --red_key_shad: sl(177, 92%, 70%);
-  --orang_key_bg: hsl(268, 47%, 21%);
-  --orange_key_shad: hsl(290, 70%, 36%);
-  --text_dark: hsl(52, 100%, 62%);
-  --text_light: hsl(198, 20%, 13%);
+  --display_bg: hsl(268, 71%, 12%);
+  --bg_equal: hsl(176, 100%, 44%);
+  --bg_keyboard: hsl(268, 71%, 12%);
+  --equal_shad: sl(177, 72%, 80%);
+  --spc_key_shad: hsl(285, 91%, 52%);
+  --text_out: hsl(52, 80%, 72%);
+  --text_display: hsl(198, 20%, 13%);
+  --norm_key_shad: hsl(290, 73%, 56%);
+  --spc_key_bg: hsl(281, 89%, 26%);
+  --fg_keys: hsl(52, 72%, 100%);
+  --bg_nrm_keys: hsl(268, 57%, 21%);
 }

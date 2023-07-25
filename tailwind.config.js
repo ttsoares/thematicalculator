@@ -1,8 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 
-const withMT = require("@material-tailwind/react/utils/withMT");
-
-module.exports = withMT({
+module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -14,25 +12,27 @@ module.exports = withMT({
     },
     screens: {
       sm: "375px",
+      md: "996px",
       xl: "1440px",
     },
     extend: {
       colors: {
         t: {
           main_bg: "var(--main_bg)",
-          tog_keypad: "var(--tog_keypad)",
-          screen_bg: "var(--screen_bg)",
-          key_bg: "var(--key_bg)",
-          key_shad: "var(--key_shad)",
-          key_bg_tog: "var(--key_bg_tog)",
-          red_key_shad: "var(--red_key_shad)",
-          orange_key_bg: "var(--orange_key_bg)",
-          orange_key_shad: "var(--orange_key_shad)",
-          text_light: "var(--text_light)",
-          text_dark: "var(--text_dark)",
+          display_bg: "var(--display_bg)",
+          bg_equal: "var(--bg_equal)",
+          bg_keyboard: "var(--bg_keyboard)",
+          equal_shad: "var(--equal_shad)",
+          spc_key_shad: "var(--spc_key_shad)",
+          text_out: "var(--text_out)",
+          text_display: "var(--text_display)",
+          norm_key_shad: "var(--norm_key_shad)",
+          spc_key_bg: "var(--spc_key_bg)",
+          bg_nrm_keys: "var(--bg_nrm_keys)",
+          fg_keys: "var(--fg_keys",
         },
       },
     },
   },
   plugins: [],
-});
+};
