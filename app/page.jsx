@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { useTheme } from "next-themes";
+import { useTheme } from "@wits/next-themes";
 
 //---------------------------------
 export default function Home() {

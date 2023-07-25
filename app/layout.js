@@ -1,6 +1,7 @@
 import "./globals.css";
 import { League_Spartan } from "next/font/google";
 
+import { ServerThemeProvider } from "@wits/next-themes";
 import Providers from "./Providers";
 
 const league = League_Spartan({ subsets: ["latin"] });
@@ -12,12 +13,12 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" suppressHydrationWarning={true}>
-      <Providers>
-        <body suppressHydrationWarning={true} className={league.className}>
-          {children}
+    <ServerThemeProvider>
+      <html lang="en">
+        <body className={league.className}>
+          <Providers>{children}</Providers>
         </body>
-      </Providers>
-    </html>
+      </html>
+    </ServerThemeProvider>
   );
 }
