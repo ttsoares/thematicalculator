@@ -97,7 +97,7 @@ export default function Home() {
       className={`${theme} flex min-h-screen flex-col items-center justify-center p-14 bg-t-main_bg`}
     >
       {/* Header */}
-      <header className="flex items-center justify-between w-64 md:w-80 mb-3">
+      <header className="flex items-center justify-between w-64 md:w-96 mb-3">
         <h1 className={`${theme} font-bold text-lg text-t-text_out`}>calc</h1>
         <div className="flex">
           <h1 className="text-xs mt-2 mr-2 text-t-text_out">theme</h1>
@@ -180,7 +180,7 @@ export default function Home() {
       </header>
       {/* display */}
       <div
-        className={`${theme} flex w-64 md:w-80 h-20 bg-t-display_bg mb-4 rounded-md  items-center justify-end`}
+        className={`${theme} flex w-64 md:w-96 h-20 bg-t-display_bg mb-4 rounded-md  items-center justify-end`}
       >
         <h1 className={`${theme} flex text-t-text_out font-bold text-3xl mr-3`}>
           {buffer.length === 0
@@ -189,7 +189,7 @@ export default function Home() {
         </h1>
       </div>
       {/* keyboard */}
-      <div className={`${theme} w-64 md:w-80 bg-t-bg_keyboard rounded-lg`}>
+      <div className={`${theme} w-64 md:w-96 bg-t-bg_keyboard rounded-lg`}>
         <div
           className={`${theme} m-3 pt-1  pb-1 grid grid-cols-4 grid-rows-5 gap-3 bg-t-bg_keyboard justify-center justify-items-center`}
         >
