@@ -5,14 +5,17 @@ import { useTheme } from "@wits/next-themes";
 
 //---------------------------------
 export default function Home() {
-  const storedTheme = localStorage.getItem("theme");
   let initialTheme = "theme1";
-  if (
-    storedTheme === "theme1" ||
-    storedTheme === "theme2" ||
-    storedTheme === "theme3"
-  ) {
-    initialTheme = storedTheme;
+
+  if (typeof window !== "undefined") {
+    const storedTheme = localStorage.getItem("theme");
+    if (
+      storedTheme === "theme1" ||
+      storedTheme === "theme2" ||
+      storedTheme === "theme3"
+    ) {
+      initialTheme = storedTheme;
+    }
   }
 
   const { theme, setTheme } = useTheme(initialTheme);
