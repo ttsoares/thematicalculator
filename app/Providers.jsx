@@ -1,9 +1,24 @@
 "use client";
 
 import { ThemeProvider } from "@wits/next-themes";
+import { useEffect, useState } from "react";
 
 const Providers = ({ children }) => {
-  return <ThemeProvider enableSystem={false}>{children}</ThemeProvider>;
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return null;
+  }
+
+  return (
+    <ThemeProvider defaultTheme="theme1" enableSystem={false}>
+      {children}
+    </ThemeProvider>
+  );
 };
 
 export default Providers;
